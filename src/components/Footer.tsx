@@ -1,15 +1,27 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    // Use setTimeout to ensure navigation happens before scrolling
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
   };
 
   return (
@@ -61,13 +73,28 @@ const Footer = () => {
                 <Link to="/" onClick={scrollToTop} className="text-mining-200 hover:text-mining-accent transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Services</Link>
+                <button 
+                  onClick={() => handleNavigation('/services')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Services
+                </button>
               </li>
               <li>
-                <Link to="/about" className="text-mining-200 hover:text-mining-accent transition-colors">About Us</Link>
+                <button 
+                  onClick={() => handleNavigation('/about')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  About Us
+                </button>
               </li>
               <li>
-                <Link to="/contact" className="text-mining-200 hover:text-mining-accent transition-colors">Contact</Link>
+                <button 
+                  onClick={() => handleNavigation('/contact')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Contact
+                </button>
               </li>
             </ul>
           </div>
@@ -77,22 +104,52 @@ const Footer = () => {
             <h3 className="text-lg font-display font-medium mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services?tab=service1" className="text-mining-200 hover:text-mining-accent transition-colors">Safety Culture Support</Link>
+                <button 
+                  onClick={() => handleNavigation('/services?tab=service1')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Safety Culture Support
+                </button>
               </li>
               <li>
-                <Link to="/services?tab=service2" className="text-mining-200 hover:text-mining-accent transition-colors">Operational Support</Link>
+                <button 
+                  onClick={() => handleNavigation('/services?tab=service2')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Operational Support
+                </button>
               </li>
               <li>
-                <Link to="/services?tab=service3" className="text-mining-200 hover:text-mining-accent transition-colors">Autonomy and Analytics</Link>
+                <button 
+                  onClick={() => handleNavigation('/services?tab=service3')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Autonomy and Analytics
+                </button>
               </li>
               <li>
-                <Link to="/services?tab=service4" className="text-mining-200 hover:text-mining-accent transition-colors">Pit Optimisation</Link>
+                <button 
+                  onClick={() => handleNavigation('/services?tab=service4')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Pit Optimisation
+                </button>
               </li>
               <li>
-                <Link to="/services?tab=service5" className="text-mining-200 hover:text-mining-accent transition-colors">Process Design Support</Link>
+                <button 
+                  onClick={() => handleNavigation('/services?tab=service5')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Process Design Support
+                </button>
               </li>
               <li>
-                <Link to="/services?tab=service6" className="text-mining-200 hover:text-mining-accent transition-colors">Project Management</Link>
+                <button 
+                  onClick={() => handleNavigation('/services?tab=service6')} 
+                  className="text-mining-200 hover:text-mining-accent transition-colors text-left"
+                >
+                  Project Management
+                </button>
               </li>
             </ul>
           </div>
