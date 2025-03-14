@@ -1,7 +1,8 @@
-
 import Hero from "@/components/Hero";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Shield, Activity, Cpu, LineChart, Settings, ClipboardList, CheckCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 interface ServiceDetailProps {
   title: string;
@@ -58,6 +59,16 @@ const ServiceDetail = ({ title, description, achievements, icon, imageUrl }: Ser
 };
 
 const Services = () => {
+  const [searchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState("service1");
+  
+  useEffect(() => {
+    const tabParam = searchParams.get("tab");
+    if (tabParam && ["service1", "service2", "service3", "service4", "service5", "service6"].includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [searchParams]);
+
   const services: ServiceDetailProps[] = [
     {
       title: "Safety Culture Support",
@@ -311,7 +322,7 @@ const Services = () => {
             </p>
           </div>
 
-          <Tabs defaultValue="service1" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="flex flex-wrap mb-8 gap-2">
               <TabsTrigger value="service1" className="flex items-center gap-2">
                 <Shield className="h-4 w-4" />

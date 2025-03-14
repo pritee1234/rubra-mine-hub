@@ -32,32 +32,38 @@ const services = [
   {
     title: "Safety Culture Support",
     description: "Transform safety culture with specialized training for impactful interactions.",
-    icon: <Shield className="h-8 w-8" />
+    icon: <Shield className="h-8 w-8" />,
+    serviceId: "service1"
   },
   {
     title: "Operational Support",
     description: "Enhance mine operations with advanced analytics and coaching for sustainable improvements.",
-    icon: <Activity className="h-8 w-8" />
+    icon: <Activity className="h-8 w-8" />,
+    serviceId: "service2"
   },
   {
     title: "Autonomy and Analytics Support",
     description: "Revolutionize fleet operations with expertise in autonomous hauling, optimizing efficiency and performance.",
-    icon: <Cpu className="h-8 w-8" />
+    icon: <Cpu className="h-8 w-8" />,
+    serviceId: "service3"
   },
   {
     title: "Pit Optimisation, Planning and Scheduling",
     description: "Maximize economic value through expert ore body comprehension, shaping practical mine designs aligned with business goals.",
-    icon: <LineChart className="h-8 w-8" />
+    icon: <LineChart className="h-8 w-8" />,
+    serviceId: "service4"
   },
   {
     title: "Process and System Design Support",
     description: "Ignite operational excellence with precise solutions, reshaping efficiency and innovation.",
-    icon: <Settings className="h-8 w-8" />
+    icon: <Settings className="h-8 w-8" />,
+    serviceId: "service5"
   },
   {
     title: "Project Management",
     description: "Empower projects with end-to-end support for on-time, on-budget delivery and effective problem-solving.",
-    icon: <ClipboardList className="h-8 w-8" />
+    icon: <ClipboardList className="h-8 w-8" />,
+    serviceId: "service6"
   }
 ];
 
@@ -90,6 +96,7 @@ const Index = () => {
                 description={service.description}
                 icon={service.icon}
                 delay={0.1 * index}
+                serviceId={service.serviceId}
               />
             ))}
           </div>
