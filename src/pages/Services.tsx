@@ -129,7 +129,7 @@ const Services = () => {
       achievements: [
         "Successfully designed and implemented daily, weekly, and monthly reconciliation processes for the mine value stream at a Tier A Gold Mine",
         "Improved asset capacity utilization, achieving the best production records through debottlenecking and strategy alignment",
-        "Introduced "Theory of Constraints" at the operational level for enhanced efficiency",
+        "Introduced 'Theory of Constraints' at the operational level for enhanced efficiency",
         "Successfully led the Transformation workstream for the open pit mine, HME maintenance, Mine Technical Services, and Asset and Material Management at a Large-Scale Copper/Gold Mine"
       ],
       icon: <Activity className="h-6 w-6" />,
