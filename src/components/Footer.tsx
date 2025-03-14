@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer className="bg-mining-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-6 md:px-12">
@@ -51,7 +58,7 @@ const Footer = () => {
             <h3 className="text-lg font-display font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-mining-200 hover:text-mining-accent transition-colors">Home</Link>
+                <Link to="/" onClick={scrollToTop} className="text-mining-200 hover:text-mining-accent transition-colors">Home</Link>
               </li>
               <li>
                 <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Services</Link>
@@ -70,22 +77,22 @@ const Footer = () => {
             <h3 className="text-lg font-display font-medium mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Safety Culture Support</Link>
+                <Link to="/services?tab=service1" className="text-mining-200 hover:text-mining-accent transition-colors">Safety Culture Support</Link>
               </li>
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Operational Support</Link>
+                <Link to="/services?tab=service2" className="text-mining-200 hover:text-mining-accent transition-colors">Operational Support</Link>
               </li>
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Autonomy and Analytics</Link>
+                <Link to="/services?tab=service3" className="text-mining-200 hover:text-mining-accent transition-colors">Autonomy and Analytics</Link>
               </li>
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Pit Optimisation</Link>
+                <Link to="/services?tab=service4" className="text-mining-200 hover:text-mining-accent transition-colors">Pit Optimisation</Link>
               </li>
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Process Design Support</Link>
+                <Link to="/services?tab=service5" className="text-mining-200 hover:text-mining-accent transition-colors">Process Design Support</Link>
               </li>
               <li>
-                <Link to="/services" className="text-mining-200 hover:text-mining-accent transition-colors">Project Management</Link>
+                <Link to="/services?tab=service6" className="text-mining-200 hover:text-mining-accent transition-colors">Project Management</Link>
               </li>
             </ul>
           </div>
