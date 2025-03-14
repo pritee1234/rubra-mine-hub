@@ -12,10 +12,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-display font-bold">
-                Rubra
-                <span className="text-mining-accent">Mining</span>
-              </span>
+              <img 
+                src="/lovable-uploads/04ca7f47-de4c-489b-9def-7c76341e2eaa.png" 
+                alt="Rubra Mining Services" 
+                className="h-12"
+              />
             </Link>
             <p className="text-mining-200 mb-4">
               Comprehensive mining solutions with a seasoned team of professionals
@@ -110,7 +111,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-mining-800 mt-12 pt-8 text-center text-mining-400 text-sm">
-          <p>&copy; {currentYear} Rubra Mining. All rights reserved.</p>
+          <p>&copy; {currentYear} Rubra Mining Services. All rights reserved.</p>
         </div>
       </div>
     </footer>

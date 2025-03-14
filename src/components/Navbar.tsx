@@ -48,10 +48,13 @@ const Navbar = () => {
           to="/" 
           className="relative z-10 flex items-center"
         >
-          <span className="text-2xl font-display font-bold text-mining-800">
-            Rubra
-            <span className="text-mining-accent">Mining</span>
-          </span>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/04ca7f47-de4c-489b-9def-7c76341e2eaa.png" 
+              alt="Rubra Mining Services" 
+              className="h-10 md:h-12"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -61,16 +64,16 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={cn(
-                "relative py-2 text-sm font-medium transition-colors hover:text-mining-accent",
+                "relative py-2 text-sm font-medium transition-colors hover:text-mining-600",
                 location.pathname === link.path
-                  ? "text-mining-accent"
+                  ? "text-mining-600"
                   : "text-mining-700"
               )}
             >
               {link.name}
               <span
                 className={cn(
-                  "absolute inset-x-0 bottom-0 h-0.5 bg-mining-accent transform transition-transform duration-300",
+                  "absolute inset-x-0 bottom-0 h-0.5 bg-mining-600 transform transition-transform duration-300",
                   location.pathname === link.path
                     ? "scale-x-100"
                     : "scale-x-0 hover:scale-x-100"
@@ -105,9 +108,9 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={cn(
-                "text-xl font-medium transition-colors hover:text-mining-accent",
+                "text-xl font-medium transition-colors hover:text-mining-600",
                 location.pathname === link.path
-                  ? "text-mining-accent"
+                  ? "text-mining-600"
                   : "text-mining-800"
               )}
             >
